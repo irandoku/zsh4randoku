@@ -1,0 +1,30 @@
+# zsh4randoku - Example .zshrc
+# Copy this to ~/.zshrc and customize
+
+# Path to zsh4randoku
+export ZSH4RANDOKU_DIR="${HOME}/.zsh4randoku"
+
+# Source the framework
+source "${ZSH4RANDOKU_DIR}/zsh4randoku.zsh"
+
+# ============================================
+# Personal configurations below
+# ============================================
+
+# Extend PATH
+path=(~/bin $HOME/.local/bin $path)
+
+# Aliases
+alias tree='tree -a -I .git'
+
+# conda initialization (if using)
+# eval "$(conda shell.zsh hook)"
+
+# Node version manager (if using)
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Your ollama plugin
+# source ~/zshplugins/zsh-ollama-command/zsh-ollama-command.zsh
+
+# ============================================

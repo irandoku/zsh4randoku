@@ -1,0 +1,15 @@
+# zsh4randoku gitignore
+
+# Local state
+.last_update
+.zcompdump*
+
+# macOS
+.DS_Store
+
+# zinit generated (installed on first run)
+zsh4randoku.zsh.zwc
+
+# User custom configs (optional)
+config/*.local.toml
+config/*.local.zsh
