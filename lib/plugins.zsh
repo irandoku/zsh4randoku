@@ -74,7 +74,7 @@ z4r_load_plugins() {
         _zsh_autosuggest_start
     fi
     
-    echo "[z4r] Plugins loaded successfully"
+    [[ -n "$Z4R_VERBOSE" ]] && echo "[z4r] Plugins loaded successfully"
 }
 
 # === Directory navigation with Shift+Arrow keys ===

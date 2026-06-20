@@ -13,5 +13,3 @@ zstyle ':fzf-tab:*' fzf-pad 4
 # Don't show preview for simple files
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -la $realpath 2>/dev/null | head -20'
 zstyle ':fzf-tab:complete:ls:*' fzf-preview 'cat ${realpath} 2>/dev/null | head -20'
-
-echo "[z4r] fzf-tab config loaded"
