@@ -7,7 +7,7 @@
 #
 
 # Version
-ZSH4RANDOKU_VERSION="0.2.1"
+ZSH4RANDOKU_VERSION="0.2.2"
 ZSH4RANDOKU_DIR="${ZSH4RANDOKU_DIR:-${HOME}/.zsh4randoku}"
 
 # Source all modules

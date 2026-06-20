@@ -42,7 +42,7 @@ backup_zshrc() {
 
 # Install recommended tools
 install_tools() {
-    local tools=("starship" "fzf" "zoxide" "atuin" "direnv" "eza")
+    local tools=("starship" "fzf" "zoxide" "atuin" "direnv" "eza" "fastfetch")
     
     echo "📦 Installing recommended tools..."
     

@@ -22,6 +22,7 @@ zsh4humans is great, but if you prefer:
 - 🔎 **History substring search**: type fragment, ↑/↓ to cycle matching history
 - ⌨️ **Sudo widget**: double-ESC to toggle sudo on current command line
 - 📦 **Extract**: universal archive extractor (`extract <file>`)
+- 🖥️ **fastfetch**: system info on first shell open (skip tmux panes)
 - 🚀 **Optional integrations**: zoxide (smart cd), atuin (history sync)
 - 🔄 **Auto-update**: Like z4h, checks updates every 28 days
 - 📦 **Modular**: Load only what you need
@@ -85,6 +86,7 @@ source "${ZSH4RANDOKU_DIR}/zsh4randoku.zsh"
 │   ├── fzf-tab.zsh      # fzf-tab configuration
 │   ├── sudo-widget.zsh   # Double-ESC sudo toggle
 │   ├── extract.zsh       # Universal archive extractor
+│   ├── fastfetch.zsh     # System info on first shell (skip tmux)
 │   └── starship.toml    # Prompt theme
 ├── dev/
 │   └── plugins-debug.zsh # Debug minimal plugin loader
