@@ -19,6 +19,9 @@ zsh4humans is great, but if you prefer:
 - 🎨 **Rich prompt** via starship (info-heavy style, catppuccin-inspired colors)
 - 🔧 **Essential plugins**: syntax-highlighting, autosuggestions, completions
 - 🔍 **fzf + fzf-tab**: fuzzy completions with dropdown menu
+- 🔎 **History substring search**: type fragment, ↑/↓ to cycle matching history
+- ⌨️ **Sudo widget**: double-ESC to toggle sudo on current command line
+- 📦 **Extract**: universal archive extractor (`extract <file>`)
 - 🚀 **Optional integrations**: zoxide (smart cd), atuin (history sync)
 - 🔄 **Auto-update**: Like z4h, checks updates every 28 days
 - 📦 **Modular**: Load only what you need
@@ -46,6 +49,8 @@ source "${ZSH4RANDOKU_DIR}/zsh4randoku.zsh"
 | Key | Action |
 |-----|--------|
 | `Ctrl+R` | atuin history search |
+| `↑` / `↓` | History substring search (type fragment first) |
+| `ESC ESC` | Toggle sudo on current command line |
 | `Tab` | fzf-tab dropdown completion |
 | `Shift+Tab` | Previous completion |
 | `z <dir>` | Jump to directory (zoxide) |
@@ -55,6 +60,7 @@ source "${ZSH4RANDOKU_DIR}/zsh4randoku.zsh"
 
 - `z4r-update` - Update all plugins and check starship
 - `zinit update --parallel` - Emergency manual plugin update
+- `extract <file>` - Extract any archive format (tar.gz, zip, 7z, rar, etc.)
 
 ## Requirements
 
@@ -75,9 +81,18 @@ source "${ZSH4RANDOKU_DIR}/zsh4randoku.zsh"
 │   ├── prompt.zsh       # Starship init
 │   └── updater.zsh      # Auto-update logic
 ├── config/
+│   ├── aliases.zsh       # eza aliases (ls, ll, la, lt)
+│   ├── fzf-tab.zsh      # fzf-tab configuration
+│   ├── sudo-widget.zsh   # Double-ESC sudo toggle
+│   ├── extract.zsh       # Universal archive extractor
 │   └── starship.toml    # Prompt theme
+├── dev/
+│   └── plugins-debug.zsh # Debug minimal plugin loader
+├── docs/migration/
+│   └── remove-z4h-plan.sh # zsh4humans migration helper
 ├── example-zshrc        # Reference config
 ├── install.sh           # One-line installer
+├── LICENSE              # MIT
 └── README.md
 ```
 

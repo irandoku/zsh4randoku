@@ -13,6 +13,11 @@ z4r_load_plugins() {
     zinit ice wait"0" lucid
     zinit light zsh-users/zsh-autosuggestions
     
+    # History substring search: type fragment, ↑/↓ to cycle matching history
+    # Must load AFTER syntax-highlighting and autosuggestions
+    zinit ice wait"0" lucid
+    zinit light zsh-users/zsh-history-substring-search
+    
     # Essential: completions (provides additional completion scripts)
     # zsh-completions doesn't need the 'blockf' for zinit turbo
     zinit ice wait"0" lucid
@@ -30,6 +35,10 @@ z4r_load_plugins() {
     # Compatible alternative to zsh-autocomplete
     zinit ice wait"1" lucid
     zinit light Aloxaf/fzf-tab
+    
+    # Bind ↑/↓ to history-substring-search (after plugins loaded)
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
     
     # Native zsh completion with compinit (call only ONCE)
     # zsh-users plugins populate fpath, then compinit builds cache
