@@ -26,7 +26,7 @@ zsh4humans is great, but if you prefer:
 ## Installation
 
 ```bash
-git clone https://github.com/randoku/zsh4randoku ~/.zsh4randoku
+git clone https://github.com/irandoku/zsh4randoku ~/.zsh4randoku
 cd ~/.zsh4randoku
 ./install.sh
 ```

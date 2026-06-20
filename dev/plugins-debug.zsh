@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 #
-# DEBUG Minimal plugins - for freeze diagnosis
+# DEBUG ONLY - Minimal plugin loader for freeze diagnosis
+# Usage: temporarily replace lib/plugins.zsh with this file
+# DO NOT source both this and lib/plugins.zsh
 #
 
 z4r_load_plugins() {

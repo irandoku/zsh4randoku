@@ -5,7 +5,7 @@
 
 set -e
 
-ZSH4RANDOKU_URL="https://github.com/randoku/zsh4randoku"
+ZSH4RANDOKU_URL="https://github.com/irandoku/zsh4randoku"
 ZSH4RANDOKU_DIR="${HOME}/.zsh4randoku"
 
 echo "🚀 Installing zsh4randoku..."
@@ -68,8 +68,12 @@ main() {
     check_deps
     backup_zshrc
     
-    # Create directory structure
-    mkdir -p "${ZSH4RANDOKU_DIR}"
+    # Clone zsh4randoku if not already present
+    if [[ ! -d "${ZSH4RANDOKU_DIR}/.git" ]]; then
+        echo "📥 Cloning zsh4randoku from ${ZSH4RANDOKU_URL}..."
+        rm -rf "${ZSH4RANDOKU_DIR}" 2>/dev/null
+        git clone "${ZSH4RANDOKU_URL}.git" "${ZSH4RANDOKU_DIR}"
+    fi
     
     echo "✅ zsh4randoku structure created at ${ZSH4RANDOKU_DIR}"
     
